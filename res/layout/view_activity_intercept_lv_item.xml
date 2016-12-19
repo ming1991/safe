@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+     >
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView 
+            android:id="@+id/view_activity_intercept_lv_item_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="号码"
+            />
+        <TextView 
+            android:id="@+id/view_activity_intercept_lv_item_tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="拦截类型"
+            />
+    </LinearLayout>
+    <ImageView 
+        android:id="@+id/view_activity_intercept_lv_item_iv_detele"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/black_delete_iv_selector"
+        android:layout_alignParentRight="true"
+        />
+    
+
+</RelativeLayout>

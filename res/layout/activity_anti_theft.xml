@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="手机防盗" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="安全号码"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/activity_anti_theft_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="110"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000" />
+
+    <RelativeLayout
+         android:id="@+id/activity_anti_theft_rl_open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="防盗保护是否开启"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/activity_anti_theft_iv_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/lock" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000" />
+
+    <TextView
+        android:id="@+id/activity_anti_theft_tv_reset"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="防盗保护是否开启"
+        android:textSize="18sp" />
+    <TextView 
+        android:textColor="#fff"
+        android:background="#9c9c9c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="功能介绍"
+         android:textSize="18sp"
+         android:padding="5dp"
+         android:layout_gravity="center_vertical"
+        />
+    
+    <TextView 
+        style="@style/SubItemStyle"
+        android:text="GPS追踪#*location*#" 
+        />
+     <TextView 
+        style="@style/SubItemStyle"
+        android:text="播放报警音乐#*alarm*#"
+        />
+      <TextView 
+        style="@style/SubItemStyle"
+        android:text="远程数据删除#*wipedata*#" />
+        />
+       <TextView 
+        style="@style/SubItemStyle"
+        android:text="远程锁屏#*lockscreen*#"
+        />
+
+</LinearLayout>

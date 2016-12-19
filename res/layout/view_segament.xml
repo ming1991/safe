@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#399AD6"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/view_segament_tv_left"
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/segament_left_bg_selector"
+            android:padding="8dp"
+            android:text="未加锁"
+            android:textColor="@color/segament_text_selector" />
+
+        <TextView
+            android:id="@+id/view_segament_tv_right"
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/segament_right_bg_selector"
+            android:padding="8dp"
+            android:text="已加锁"
+            android:textColor="@color/segament_text_selector" />
+</LinearLayout>

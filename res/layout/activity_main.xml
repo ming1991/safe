@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_top"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/act_main_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/heima" />
+
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/act_main_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/setting"
+            android:background="@drawable/setting_selector" />
+
+        <TextView
+            android:id="@+id/act_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_main_setting"
+            android:layout_toRightOf="@id/act_main_icon"
+            android:text="黑马程序员安全卫士"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <com.example.mobilesafe01.view.MarqueeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_main_title"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/act_main_icon"
+            android:text="黑马程序员手机卫士,时刻保卫您的手机,http://www.itheima.com"
+            android:textColor="#f00"
+            android:textSize="18sp"
+             />
+    </RelativeLayout>
+
+    <GridView
+        android:numColumns="2"
+        android:id="@+id/act_main_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </GridView>
+
+</LinearLayout>

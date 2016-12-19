@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingItemView">
+        <attr name="siv_text" format="string|reference" />
+        <attr name="siv_iv" format="boolean" />
+        <attr name="siv_bg">
+            <enum name="top" value="0" />
+            <enum name="mid" value="1" />
+            <enum name="bottom" value="2" />
+        </attr>
+    </declare-styleable>
+    
+    <declare-styleable name="AppManagerStoreView">
+        <attr name="am_text" format="string|reference"></attr>
+    </declare-styleable>
+    
+    <!-- 程序锁分隔加载的自定义控件 -->
+    <declare-styleable name="SegamentView">
+        <attr name="sv_left_tv" format="string|reference" />
+        <attr name="sv_right_tv" format="string|reference" />
+        <attr name="sv_select">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

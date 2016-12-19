@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+    <TextView
+        style="@style/TitleStyle"
+        android:text="流量统计" 
+        />
+    
+    <!-- 添加一个进度条 -->
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+         <ListView 
+        android:id="@+id/act_traffic_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></ListView>
+         <include 
+             layout="@layout/my_progressbar_style"
+             android:id="@+id/act_traffic_pb"
+             />
+        
+    </FrameLayout>
+   
+</LinearLayout>

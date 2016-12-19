@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.mobilesafe01"
+    xmlns:setting="http://schemas.android.com/apk/res/com.example.mobilesafe01"
+    >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        
+        <TextView
+        style="@style/TitleStyle"
+        android:text="进程管理" 
+        />
+        
+        <!-- 放在后面,不然会被盖住 -->
+        <ImageButton 
+            android:id="@+id/act_process_manager_ib_clean"
+            android:layout_margin="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/process_clean_selector"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    
+    <com.example.mobilesafe01.view.AppManagerStoreView
+        android:id="@+id/act_process_manager_process"
+        app:am_text="进程数:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.example.mobilesafe01.view.AppManagerStoreView>
+    
+    <com.example.mobilesafe01.view.AppManagerStoreView
+        android:id="@+id/act_process_manager_ram"
+        app:am_text="内存:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.example.mobilesafe01.view.AppManagerStoreView>
+    
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView 
+        android:id="@+id/act_process_manager_lv_process"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        ></se.emilsjolander.stickylistheaders.StickyListHeadersListView>
+        
+        <!-- 放在listView所在的帧布局中,自动 处于视图的底部 -->
+        <SlidingDrawer
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:content="@+id/content"
+            android:handle="@+id/handle" >
+
+            <LinearLayout
+                android:id="@id/handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/act_process_manager_arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/drawer_arrow_up" />
+
+                <ImageView
+                    android:id="@+id/act_process_manager_arrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/drawer_arrow_up" />
+            </LinearLayout>
+
+            <!-- 加clickable属性,让抽屉打开的视图可以被点击,不至于穿透视图,并把背景改成不白色android:background="#fff"   android:clickable="true" -->
+            <LinearLayout
+                android:id="@id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+               	android:clickable="true"
+                android:orientation="vertical" >
+			
+                <TextView
+                    style="@style/SubTitle_desc"
+                    android:padding="8dp"
+                    android:text="进程管理设置" />
+
+                <com.example.mobilesafe01.view.SettingItemView 
+                    android:id="@+id/act_process_manager_show_sys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    setting:siv_text="显示系统进程"
+       				setting:siv_iv="true"
+       				setting:siv_bg="top"
+                    >
+                </com.example.mobilesafe01.view.SettingItemView >
+
+                <com.example.mobilesafe01.view.SettingItemView
+                    android:id="@+id/act_process_manager_auto_clean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    setting:siv_text="锁屏自动清理"
+       				setting:siv_iv="true"
+       				setting:siv_bg="bottom"
+                    >
+                </com.example.mobilesafe01.view.SettingItemView>
+            </LinearLayout>
+        </SlidingDrawer>
+        <include layout="@layout/my_progressbar_style"
+            android:id="@+id/act_process_manager_pb"
+            />
+    </FrameLayout>
+    
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button 
+            android:onClick="select_all"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="全选"
+            />
+        <Button
+            android:onClick="select_reverse"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="反选"
+            />
+    </LinearLayout>
+    
+</LinearLayout>
+

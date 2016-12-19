@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.mobilesafe01"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<com.example.mobilesafe01.view.SegamentView 
+	    android:id="@+id/act_app_lock_segament"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    app:sv_left_tv="未加锁"
+	    app:sv_right_tv="已加锁"
+	    app:sv_select="left"
+	    ></com.example.mobilesafe01.view.SegamentView>
+   
+    <TextView 
+        android:id="@+id/act_app_lock_tv_title"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BABABA"
+        android:text="加锁个数"
+        />
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ListView 
+            android:id="@+id/act_app_lock_lv_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <ListView 
+            android:id="@+id/act_app_lock_lv_right"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <include 
+            android:id="@+id/act_app_lock_load"
+            layout="@layout/my_progressbar_style"
+            />
+    </FrameLayout>
+</LinearLayout>

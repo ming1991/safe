@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mobilesafe01"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 软件优先安装的目录 -->
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.DELETECACHEFILES" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+	
+	<!-- 程序的主入口 -->
+    <application
+        android:name="com.example.mobilesafe01.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        
+        <!-- ACRA bug收集界面的dialog样式 -->
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:process=":error_report"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+         </activity>
+        
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name=".activity.AntiTheftActivity"
+            android:label="@string/title_activity_anti_theft" >
+        </activity>
+        <activity
+            android:name=".activity.AntiTheftSetup1Activity"
+            android:label="@string/title_activity_anti_theft_setup1" >
+        </activity>
+        <activity
+            android:name=".activity.AntiTheftSetup2Activity"
+            android:label="@string/title_activity_anti_theft_setup2" >
+        </activity>
+        <activity
+            android:name=".activity.AntiTheftSetup3Activity"
+            android:label="@string/title_activity_anti_theft_setup3" >
+        </activity>
+        <activity
+            android:name=".activity.AntiTheftSetup4Activity"
+            android:label="@string/title_activity_anti_theft_setup4" >
+        </activity>
+        <activity
+            android:name=".activity.AntiTheftSetup5Activity"
+            android:label="@string/title_activity_anti_theft_setup5" >
+        </activity>
+        <activity
+            android:name=".activity.SelectContactActivity"
+            android:label="@string/title_activity_select_contact" >
+        </activity>
+
+        <!-- ===================================	receiver	=================================== -->
+
+
+        <!-- 定义一个桌面小控件的广播 ,反编译金山软件的桌面小控件,此处是头破口 -->
+        <receiver android:name=".receiver.MyAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+        <!-- 监听开机启动的广播 -->
+        <receiver android:name=".receiver.BootReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- 监听短信的广播 -->
+        <receiver android:name=".receiver.SmsReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 注册设备管理员的广播 -->
+        <receiver
+            android:name=".receiver.LockDeviceAdmin"
+            android:description="@string/sample_device_admin_description"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ===================================	service		=================================== -->
+
+
+        <!-- 程序锁服务2 -->
+        <service
+            android:name=".service.AppLockService2"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!-- 程序锁的服务1 -->
+        <service android:name=".service.AppLockService" >
+        </service>
+        <!-- 锁屏自动清理后台程序 -->
+        <service android:name=".service.LockScreenCleanService" >
+        </service>
+
+        <!-- 一键清理后台进程的服务 -->
+        <service android:name=".service.OneKeyCleanService" >
+        </service>
+        <!-- 更新桌面小控件widget内容的服务 -->
+        <service android:name=".service.UpdateAppWidgetService" >
+        </service>
+
+        <!-- 保护自己的程序不被杀死的服务 -->
+        <service android:name=".service.ProtectedService" >
+        </service>
+        <!-- 获取gps位置的服务 -->
+        <service android:name=".service.LocationService" >
+        </service>
+        <service android:name=".service.InterceptService" >
+        </service>
+        <service android:name=".service.LocationSerivce" >
+        </service>
+
+        <activity
+            android:name=".activity.InterceptActivity"
+            android:label="@string/title_activity_intercept" >
+        </activity>
+        <activity
+            android:name=".activity.AddBlackActivity"
+            android:label="@string/title_activity_add_black" >
+        </activity>
+        <activity
+            android:name=".activity.UpdateBlackActivity"
+            android:label="@string/title_activity_update_black" >
+        </activity>
+        <activity
+            android:name=".activity.ToolsActivity"
+            android:label="@string/title_activity_tools" >
+        </activity>
+        <activity
+            android:name=".activity.QueryNumLocationActivity"
+            android:label="@string/title_activity_query_num_location" >
+        </activity>
+        <activity
+            android:name=".activity.OperateBlackActivity"
+            android:label="@string/title_activity_operate_black" >
+        </activity>
+        <activity
+            android:name=".activity.QueryCommonNumActivity"
+            android:label="@string/title_activity_query_common_num" >
+        </activity>
+        <activity
+            android:name=".AppManagerActivity"
+            android:label="@string/title_activity_app_manager" >
+        </activity>
+        <activity
+            android:name=".TrafficActivity"
+            android:label="@string/title_activity_traffic" >
+        </activity>
+        <activity
+            android:name=".ProcessManagerActivity"
+            android:label="@string/title_activity_process_manager" >
+        </activity>
+        <activity
+            android:name=".AppLockActivity"
+            android:label="@string/title_activity_app_lock" >
+        </activity>
+
+        <!-- 锁屏界面,启动模式改成单利模式 -->
+        <!-- 排除最近使用的界面 -->
+        <activity
+            android:name=".LockScreenActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_lock_screen"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name=".CacheCleanActivity"
+            android:label="@string/title_activity_cache_clean" >
+        </activity>
+        <activity
+            android:name=".AntiVirusActivity"
+            android:label="@string/title_activity_anti_virus" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="号码归属地查询" />
+     <EditText 
+        android:id="@+id/act_query_num_location_et_input"
+        android:layout_margin="10dp"
+        android:background="@drawable/et_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要查询的号码"
+        android:inputType="number"
+        />
+     <Button 
+         android:onClick="query"
+         android:layout_margin="5dp"
+         android:layout_width="match_parent"
+          android:textColor="@color/left_but_text_selector"
+          style="@style/btn_confirm"
+          android:text="查询"
+          /> 
+          
+     <TextView
+         android:id="@+id/act_query_num_location_tv_show"
+         android:textSize="18dp"
+         android:layout_margin="5dp" 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:text="归属地:"
+         />
+</LinearLayout>

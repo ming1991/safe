@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@drawable/my_toast_bg"
+    android:padding="5dp"
+    >
+    <TextView 
+        android:id="@+id/view_my_toast_tv"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未知号码"
+        />
+
+</LinearLayout>

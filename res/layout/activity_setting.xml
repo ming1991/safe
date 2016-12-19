@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setting="http://schemas.android.com/apk/res/com.example.mobilesafe01"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+    <TextView
+        style="@style/TitleStyle"
+        android:text="设置中心" 
+        />
+    <!-- 使用自定义组合控件的属性,一定要要加自定义的命名空间 -->
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_setting_update"
+       android:layout_marginTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="自动更新设置"
+       setting:siv_iv="true"
+       setting:siv_bg="top"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_setting_intercept"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="骚拦截设置"
+       setting:siv_iv="true"
+       setting:siv_bg="bottom"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_setting_location"
+       android:layout_marginTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="归属地显示设置"
+       setting:siv_iv="true"
+       setting:siv_bg="top"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_setting_style"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="归属地风格设置"
+       setting:siv_iv="false"
+       setting:siv_bg="bottom"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   
+  
+   
+
+</LinearLayout>

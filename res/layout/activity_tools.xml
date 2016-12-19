@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setting="http://schemas.android.com/apk/res/com.example.mobilesafe01"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+    <TextView
+        style="@style/TitleStyle"
+        android:text="常用工具" 
+        />
+    <!-- 使用自定义组合控件的属性,一定要要加自定义的命名空间 -->
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_tools_query_location"
+       android:layout_marginTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="号码归属地查询"
+       setting:siv_iv="false"
+       setting:siv_bg="top"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_tools_query_num"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="常用号码查询"
+       setting:siv_iv="false"
+       setting:siv_bg="bottom"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_tools_sms_backup"
+       android:layout_marginTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="短信备份"
+       setting:siv_iv="false"
+       setting:siv_bg="top"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_tools_sms_restore"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="短信还原"
+       setting:siv_iv="false"
+       setting:siv_bg="bottom"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   
+  <com.example.mobilesafe01.view.SettingItemView 
+      android:id="@+id/act_tools_app_lock"
+       android:layout_marginTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="程序锁管理"
+       setting:siv_iv="false"
+       setting:siv_bg="top"
+       ></com.example.mobilesafe01.view.SettingItemView>
+  
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_tools_app_lock1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="程序锁服务1"
+       setting:siv_iv="true"
+       setting:siv_bg="mid"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   <com.example.mobilesafe01.view.SettingItemView 
+       android:id="@+id/act_tools_app_lock2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       setting:siv_text="程序锁服务2"
+       setting:siv_iv="true"
+       setting:siv_bg="bottom"
+       ></com.example.mobilesafe01.view.SettingItemView>
+   
+
+</LinearLayout>
+

@@ -1,0 +1,184 @@
+# view AndroidManifest.xml #generated:241
+-keep class com.example.mobilesafe01.AntiVirusActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.example.mobilesafe01.App { <init>(...); }
+
+# view AndroidManifest.xml #generated:224
+-keep class com.example.mobilesafe01.AppLockActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:212
+-keep class com.example.mobilesafe01.AppManagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:237
+-keep class com.example.mobilesafe01.CacheCleanActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:231
+-keep class com.example.mobilesafe01.LockScreenActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:220
+-keep class com.example.mobilesafe01.ProcessManagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:216
+-keep class com.example.mobilesafe01.TrafficActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:188
+-keep class com.example.mobilesafe01.activity.AddBlackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class com.example.mobilesafe01.activity.AntiTheftActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:77
+-keep class com.example.mobilesafe01.activity.AntiTheftSetup1Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:81
+-keep class com.example.mobilesafe01.activity.AntiTheftSetup2Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.example.mobilesafe01.activity.AntiTheftSetup3Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:89
+-keep class com.example.mobilesafe01.activity.AntiTheftSetup4Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:93
+-keep class com.example.mobilesafe01.activity.AntiTheftSetup5Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:184
+-keep class com.example.mobilesafe01.activity.InterceptActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.example.mobilesafe01.activity.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:204
+-keep class com.example.mobilesafe01.activity.OperateBlackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:208
+-keep class com.example.mobilesafe01.activity.QueryCommonNumActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:200
+-keep class com.example.mobilesafe01.activity.QueryNumLocationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:97
+-keep class com.example.mobilesafe01.activity.SelectContactActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:69
+-keep class com.example.mobilesafe01.activity.SettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:62
+-keep class com.example.mobilesafe01.activity.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:196
+-keep class com.example.mobilesafe01.activity.ToolsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:192
+-keep class com.example.mobilesafe01.activity.UpdateBlackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:116
+-keep class com.example.mobilesafe01.receiver.BootReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:129
+-keep class com.example.mobilesafe01.receiver.LockDeviceAdmin { <init>(...); }
+
+# view AndroidManifest.xml #generated:106
+-keep class com.example.mobilesafe01.receiver.MyAppWidgetProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:122
+-keep class com.example.mobilesafe01.receiver.SmsReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:160
+-keep class com.example.mobilesafe01.service.AppLockService { <init>(...); }
+
+# view AndroidManifest.xml #generated:146
+-keep class com.example.mobilesafe01.service.AppLockService2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:179
+-keep class com.example.mobilesafe01.service.InterceptService { <init>(...); }
+
+# view AndroidManifest.xml #generated:181
+-keep class com.example.mobilesafe01.service.LocationSerivce { <init>(...); }
+
+# view AndroidManifest.xml #generated:177
+-keep class com.example.mobilesafe01.service.LocationService { <init>(...); }
+
+# view AndroidManifest.xml #generated:163
+-keep class com.example.mobilesafe01.service.LockScreenCleanService { <init>(...); }
+
+# view AndroidManifest.xml #generated:167
+-keep class com.example.mobilesafe01.service.OneKeyCleanService { <init>(...); }
+
+# view AndroidManifest.xml #generated:174
+-keep class com.example.mobilesafe01.service.ProtectedService { <init>(...); }
+
+# view AndroidManifest.xml #generated:170
+-keep class com.example.mobilesafe01.service.UpdateAppWidgetService { <init>(...); }
+
+# view res/layout/activity_app_manager.xml #generated:12
+# view res/layout/activity_app_manager.xml #generated:20
+# view res/layout/activity_process_manager.xml #generated:31
+# view res/layout/activity_process_manager.xml #generated:39
+-keep class com.example.mobilesafe01.view.AppManagerStoreView { <init>(...); }
+
+# view res/layout/activity_main.xml #generated:39
+-keep class com.example.mobilesafe01.view.MarqueeTextView { <init>(...); }
+
+# view res/layout/activity_app_lock.xml #generated:8
+-keep class com.example.mobilesafe01.view.SegamentView { <init>(...); }
+
+# view res/layout/activity_process_manager.xml #generated:105
+# view res/layout/activity_process_manager.xml #generated:116
+# view res/layout/activity_setting.xml #generated:13
+# view res/layout/activity_setting.xml #generated:22
+# view res/layout/activity_setting.xml #generated:31
+# view res/layout/activity_setting.xml #generated:40
+# view res/layout/activity_tools.xml #generated:13
+# view res/layout/activity_tools.xml #generated:22
+# view res/layout/activity_tools.xml #generated:31
+# view res/layout/activity_tools.xml #generated:40
+# view res/layout/activity_tools.xml #generated:49
+# view res/layout/activity_tools.xml #generated:59
+# view res/layout/activity_tools.xml #generated:67
+-keep class com.example.mobilesafe01.view.SettingItemView { <init>(...); }
+
+# view res/layout/activity_anti_virus.xml #generated:24
+-keep class com.github.lzyzsd.circleprogress.ArcProgress { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class org.acra.CrashReportDialog { <init>(...); }
+
+# view res/layout/activity_process_manager.xml #generated:54
+-keep class se.emilsjolander.stickylistheaders.StickyListHeadersListView { <init>(...); }
+
+# onClick res/layout/activity_add_black.xml #generated:80
+# onClick res/layout/activity_operate_black.xml #generated:83
+# onClick res/layout/activity_update_black.xml #generated:82
+-keepclassmembers class * { *** cancel(...); }
+
+# onClick res/layout/activity_anti_theft_setup1.xml #generated:70
+# onClick res/layout/activity_anti_theft_setup2.xml #generated:86
+# onClick res/layout/activity_anti_theft_setup3.xml #generated:76
+# onClick res/layout/activity_anti_theft_setup4.xml #generated:89
+# onClick res/layout/activity_anti_theft_setup5.xml #generated:67
+-keepclassmembers class * { *** next_page(...); }
+
+# onClick res/layout/activity_anti_theft_setup2.xml #generated:82
+# onClick res/layout/activity_anti_theft_setup3.xml #generated:72
+# onClick res/layout/activity_anti_theft_setup4.xml #generated:85
+# onClick res/layout/activity_anti_theft_setup5.xml #generated:63
+-keepclassmembers class * { *** pre_page(...); }
+
+# onClick res/layout/activity_query_num_location.xml #generated:20
+-keepclassmembers class * { *** query(...); }
+
+# onClick res/layout/activity_add_black.xml #generated:72
+# onClick res/layout/activity_operate_black.xml #generated:74
+-keepclassmembers class * { *** save(...); }
+
+# onClick res/layout/activity_process_manager.xml #generated:139
+-keepclassmembers class * { *** select_all(...); }
+
+# onClick res/layout/activity_process_manager.xml #generated:146
+-keepclassmembers class * { *** select_reverse(...); }
+
+# onClick res/layout/activity_update_black.xml #generated:74
+-keepclassmembers class * { *** update(...); }
+

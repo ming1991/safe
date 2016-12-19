@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="锁屏界面" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/act_lock_screen_iv_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/act_lock_screen_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_lock_screen_iv_icon"
+            android:layout_centerHorizontal="true"
+            android:text="Browser" />
+    </RelativeLayout>
+
+    <EditText
+        android:password="true"
+        android:id="@+id/act_lock_screen_et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码" 
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/act_lock_screen_bt"
+        android:layout_margin="5dp"
+        style="@style/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="@color/left_but_text_selector" />
+
+</LinearLayout>

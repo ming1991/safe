@@ -1,0 +1,121 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+   
+    
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="TitleStyle" >
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    	<item name="android:textColor">#fff</item>
+    	<item name="android:background">#429ED6</item>
+    	<item name="android:layout_width">match_parent</item>
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:textSize">25sp</item>
+    	<item name="android:gravity">center_horizontal</item>
+    	<item name="android:padding">10dp</item>
+    
+    </style>
+    <!-- 每个界面的标题 -->
+    <style name="SubTitleStyle" parent="TitleStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    
+     <!-- 每个界面的标题 下的介绍-->
+    <style name="SubTitle_desc" >
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <!-- 每个界面的子条目 -->
+    <style name="SubItemStyle">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:drawableLeft">@drawable/dialog_title_default_icon</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+    <!-- 下一步按钮的样式 -->
+    <style name="Btn_next">
+        <item name="android:textColor">@color/left_but_text_selector</item>
+        <item name="android:background">@drawable/left_but_selector</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">下一步</item>
+        <item name="android:drawableRight">@drawable/next</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    
+    <!-- 下一步的按钮的样式 -->
+    <style name="Btn_pre">
+        <item name="android:textColor">@color/left_but_text_selector</item>
+        <item name="android:background">@drawable/left_but_selector</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableLeft">@drawable/pre</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:text">上一步</item>
+         <item name="android:padding">5dp</item>
+    </style>
+    <!-- 确认按钮 -->
+    <style name="btn_confirm">
+        <item name="android:background">@drawable/left_but_selector</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <!-- 取消按钮 -->
+    <style name="btn_cancel">
+        <item name="android:background">@drawable/right_but_selector</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <!-- 进度条,覆写系统的样式 ,换成自己的图片-->
+    <style name="MyProgressBar" parent="@android:style/Widget.ProgressBar">
+         <item name="android:indeterminateDrawable">@drawable/progress_medium_white</item>
+    </style>
+    
+    <!-- 归属地样式底部对话框的样式,覆写背景图,原图黑色有外边距,修改成透明 -->
+	<style name="Location_Style_Dialog" parent="@android:Theme.Dialog">
+	   <item name="android:windowBackground">@android:color/transparent</item>
+	</style>    
+    
+	<!--  软件管家上面的进度条 -->
+    <style name="App_pb_style" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+    </style>
+    
+    <!-- popwindow的动画样式 -->
+   <style name="Pop_animation" >
+       <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+   </style>
+   
+   <style name="widget_text">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    
+</resources>
